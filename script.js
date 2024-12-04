@@ -13,7 +13,7 @@ let lives = 6;
 
 // Update the image based on remaining lives
 function updateHangmanImage() {
-  hangmanImage.src = `images/hangman-${lives}.png`;
+  hangmanImage.src = `img/hangman-${lives}.jpg`;
 }
 
 // Handle guesses
@@ -30,7 +30,8 @@ function handleGuess(char, keyElement) {
     wordDisplay.textContent = hiddenWord.join(" ");
 
     if (!hiddenWord.includes("_")) {
-      message.textContent = "🎉 You Win!";
+      message.innerHTML = "🎉 Betulll!! Pandainyaaa. Nah <a href='https://qw4ckk3r.github.io/ArleedaBirthday/'>hadiah</a> 🎉";
+
       endGame();
     }
   } else {
@@ -39,7 +40,7 @@ function handleGuess(char, keyElement) {
     updateHangmanImage();
 
     if (lives === 0) {
-      message.textContent = `Kalah?`;
+      message.textContent = `Main elok-elok la >:I`;
       endGame();
     }
   }
